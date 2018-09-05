@@ -16,11 +16,14 @@ class CreateFeaturedProductsTable extends Migration
         Schema::create('featured_products', function (Blueprint $table) {
 	$table->increments('id');
 	$table->string('name');
-	$table->string('image');
+	$table->string('image1')->nullable();
+	$table->string('image2')->nullable();
+	$table->string('image3')->nullable();
 	$table->string('dimension');
 	$table->string('weight');
-	$table->text('materialUsed');
-	$table->text('description');
+	$table->longtext('materialUsed');
+	$table->longtext('description');
+	$table->string('price');
 	$table->timestamps();
         });
     }

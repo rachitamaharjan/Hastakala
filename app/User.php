@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\product;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -15,8 +15,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','profilepic', 'description', 'thingsimake', 'link', 'phone',
     ];
+
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -26,4 +28,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+	public function products(){
+    		return $this->hasMany('App\product');
+	}
+
 }
