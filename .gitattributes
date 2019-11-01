@@ -1,6 +1,5 @@
 static/* linguist-vendored
 # *.html linguist-vendored=false
-*.html linguist-language=css
 *.html linguist-language=php
 # *.css linguist-language = php
 * text=auto
